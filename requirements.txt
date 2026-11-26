@@ -1,0 +1,9 @@
+fastapi>=0.110
+uvicorn[standard]>=0.29
+python-multipart>=0.0.9
+pillow>=10.0
+numpy>=1.26
+# <5: la serie 4.x incluye los archivos Haar cascade que usa el detector de rostros
+opencv-python-headless>=4.8,<5
+# Recorte de fondo de calidad. Si no se instala, el proyecto usa GrabCut (OpenCV) como plan B.
+rembg[cpu]>=2.0.57

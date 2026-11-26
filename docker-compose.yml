@@ -1,0 +1,11 @@
+services:
+  fabrica:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./assets:/app/assets     # personajes generados (persisten fuera del contenedor)
+      - ./data:/app/data         # base de datos SQLite y fotos subidas
+      - rembg-models:/root/.u2net  # modelo de recorte de fondo (se descarga una sola vez)
+volumes:
+  rembg-models:
